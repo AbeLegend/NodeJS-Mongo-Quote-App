@@ -1,0 +1,36 @@
+<div class="container mt3">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Form Tambah Data Quote</h2>
+      <% if (typeof errors !='undefined') { %>
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          <% errors.forEach(err => { %>
+          <li><%= err.msg %> </li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+      <form method="POST" action="/quote">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="nohp" class="form-label">No HP</label>
+          <input type="text" class="form-control" id="nohp" name="nohp" required>
+        </div>
+        <div class="mb-3">
+          <label for="quote" class="form-label">Quote</label>
+          <input type="text" class="form-control" id="quote" name="quote">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Tambah Data Quote</button>
+      </form>
+    </div>
+  </div>
+</div>
